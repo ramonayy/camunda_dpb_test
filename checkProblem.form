@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "label": "Order Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0xd2gih",
+        "columns": null
+      },
+      "id": "Field_0d84zg8",
+      "key": "orderNumber"
+    },
+    {
+      "label": "What could have possibly gone wrong?",
+      "values": [
+        {
+          "label": "System Failure",
+          "value": "systemFailure"
+        },
+        {
+          "label": "Wrong Inventory",
+          "value": "wrongInventory"
+        },
+        {
+          "label": "Update on Stock Failed",
+          "value": "updateOnStockFailed"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_0i28w9w",
+        "columns": null
+      },
+      "id": "Field_12u539e",
+      "key": "incidents"
+    },
+    {
+      "type": "table",
+      "layout": {
+        "row": "Row_1pfrmvc",
+        "columns": null
+      },
+      "label": "Measurements",
+      "rowCount": 10,
+      "columns": [
+        {
+          "label": "ID",
+          "key": "id"
+        },
+        {
+          "label": "Incident",
+          "key": "incident"
+        },
+        {
+          "key": "resolve",
+          "label": "Resolve"
+        }
+      ],
+      "id": "Field_1qfpb6f",
+      "dataSource": "=Field_1qfpb6f"
+    }
+  ],
+  "type": "default",
+  "id": "Form_03trig4",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.10.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.51.1"
+  },
+  "schemaVersion": 19
+}

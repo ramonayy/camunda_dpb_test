@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "label": "order number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0zorllh",
+        "columns": null
+      },
+      "id": "Field_0lbuya0",
+      "key": "orderNumber",
+      "validate": {
+        "minLength": "6",
+        "maxLength": "10",
+        "required": true
+      }
+    },
+    {
+      "label": "Prozessstatus",
+      "values": [
+        {
+          "label": "successfully processed",
+          "value": "successfullyProcessed"
+        },
+        {
+          "label": "problem identified",
+          "value": "problemIdentified"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_0992tvx",
+        "columns": null
+      },
+      "id": "Field_0nvc0dm",
+      "key": "processState"
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0v3iw8g",
+        "columns": null
+      },
+      "id": "Field_1sho3y6",
+      "key": "datetime_cajzgr",
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_offset",
+      "timeInterval": 15,
+      "use24h": true
+    }
+  ],
+  "type": "default",
+  "id": "form345",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.10.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.51.1"
+  },
+  "schemaVersion": 19
+}

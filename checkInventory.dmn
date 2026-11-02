@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="checkMaterial" name="check inventory" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.51.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.10.0">
+  <decision id="checkInventory" name="check inventory">
+    <variable id="Variable_1" name="check inventory" typeRef="Any" />
+    <decisionTable id="DecisionTable_1daccs6">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="boolean">
+          <text>availableStock</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="inventoryResult" typeRef="boolean" />
+      <rule id="DecisionRule_0k4ss36">
+        <inputEntry id="UnaryTests_0tupyua">
+          <text>&gt;= requestedQuantity</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r4qoj3">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gix45f">
+        <inputEntry id="UnaryTests_1gxtpmo">
+          <text>&lt; requestedQuantity</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_017ndrz">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="Decision_1k2o9c0_di" dmnElementRef="checkInventory">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

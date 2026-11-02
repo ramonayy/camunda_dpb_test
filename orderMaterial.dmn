@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="lkasd9m33" name="order material" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.51.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.10.0">
+  <decision id="orderMaterial" name="order material">
+    <variable id="Variable_1" name="order material" typeRef="Any" />
+    <decisionTable id="DecisionTable_1ewctb9">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="number">
+          <text>availableStock</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="orderedMaterial" typeRef="number" />
+      <rule id="DecisionRule_02no04v">
+        <inputEntry id="UnaryTests_17wudk0">
+          <text>&lt; requestedQuantity</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jepoo7">
+          <text>requestedQuantity * 5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nesrwq">
+        <inputEntry id="UnaryTests_1l271f2">
+          <text>&gt; requestedQuantity</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m4dk16">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sqhapk">
+        <inputEntry id="UnaryTests_1te7q3x">
+          <text>requestedQuantity</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1617w4x">
+          <text>requestedQuantity * 4</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="Decision_19xu0zq_di" dmnElementRef="orderMaterial">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
